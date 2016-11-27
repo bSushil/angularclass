@@ -12,18 +12,21 @@
 
     $scope.checkItems = function()
     {
-      if($scope.inputString == '')
-      {
-        $scope.color = 'warning';
-        $scope.message = 'Please enter something first';
-      }
-
       var itemsLength = checkString($scope.inputString);
-      switch(itemsLength)
+      console.log(itemsLength);
+
+      if(itemsLength == 0)
       {
-        case (itemsLength > 3): $scope.message = 'Too much food'; $scope.color = 'warning'; break;
-        case 0: $scope.message = 'Empty Plate!';$scope.color = 'warning'; break;
-        default: $scope.message = 'Enjoy your food!';$scope.color = 'green'; break;
+        $scope.message = 'Empty Plate! Please enter something first!';
+        $scope.color = 'warning';
+      }
+      else if (itemsLength > 3) {
+        $scope.message = 'Too much food! You will get fat';
+        $scope.color = 'warning';
+      }
+      else {
+        $scope.message = 'Enjoy your meal!';
+        $scope.color = 'green';
       }
     };
 
