@@ -13,7 +13,6 @@
     $scope.checkItems = function()
     {
       var itemsLength = checkString($scope.inputString);
-      console.log(itemsLength);
 
       if(itemsLength == 0)
       {
