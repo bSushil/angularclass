@@ -5,6 +5,15 @@
     <title>String ASCII Code Calculator in Angular JS</title>
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
+    <style media="screen">
+      .green{
+        color:green;
+      }
+      .warning
+      {
+        color:red;
+      }
+    </style>
   </head>
   <body>
     <h1>Enter a string</h1>
@@ -13,7 +22,7 @@
         <input type="text" name="name" ng-model="inputString">
         <button type="button" name="button" ng-click="checkItems();">Check if Too Much</button>
         <br>
-        {{message | uppercase}}
+        <div class="{{color}}">{{message | uppercase}}</div>
       </div>
     </div>
   </body>

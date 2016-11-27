@@ -8,15 +8,22 @@
   {
     $scope.inputString = '';
     $scope.message = '';
+    $scope.color = '';
 
     $scope.checkItems = function()
     {
+      if($scope.inputString == '')
+      {
+        $scope.color = 'warning';
+        $scope.message = 'Please enter something first';
+      }
+
       var itemsLength = checkString($scope.inputString);
       switch(itemsLength)
       {
-        case (itemsLength > 3): $scope.message = 'Too much food';
-        case 0: $scope.message = 'Empty Plate!';
-        default: $scope.message = 'Enjoy your food!';
+        case (itemsLength > 3): $scope.message = 'Too much food'; $scope.color = 'warning'; break;
+        case 0: $scope.message = 'Empty Plate!';$scope.color = 'warning'; break;
+        default: $scope.message = 'Enjoy your food!';$scope.color = 'green'; break;
       }
     };
 
