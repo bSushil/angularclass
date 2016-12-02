@@ -2,9 +2,12 @@
 {
   'use strict';
   angular.module('stringCodeCalculator', [])
+  .controller('stringCodeCalculatorController', stringCodeCalculatorController)
+  .filter('loves', lovesFilter);
 
+  stringCodeCalculatorController.$inject = ['$scope', 'lovesFilter'];
 
-  .controller('stringCodeCalculatorController', function($scope)
+  function stringCodeCalculatorController($scope, lovesFilter)
   {
     $scope.inputString = '';
     $scope.message = '';
@@ -40,5 +43,13 @@
       }
       return itemsCount;
     }
-  });
+  };
+
+  function lovesFilter()
+  {
+    return function(input)
+    {
+      return input;
+    }
+  }
 })();
