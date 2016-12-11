@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Narrow Down Your Menu Choice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/jquery-3.1.0.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+  </head>
+<body ng-app="ngFilterApp">
+   <div class="container" ng-controller="SearchFilterController as searchForm">
+     <div class="row">
+       <div class="col-lg-12 col-md-12 col-sm-12">
+         <h1>Narrow Down Your Chinese Menu Choice</h1>
+
+         <div>
+           <div class="form-group">
+             <input type="text" placeholder="search term" class="form-control" ng-model="searchForm.searchKey">
+           </div>
+           <div class="form-group narrow-button">
+             <button class="btn btn-primary" ng-click="searchForm.search();">Narrow It Down For Me!</button>
+           </div>
+         </div>
+
+       </div>
+     </div>
+     <div class="row">
+       <div class="col-lg-12 col-md-12 col-sm-12">
+         <!-- found-items should be implemented as a component -->
+         <div>
+           <found-items-list items="searchForm.foundItems" on-remove="searchForm.removeItem(index)" title="{{searchForm.title}}">
+             <div class="row">
+               <div class="col-lg-4 col-md-4 col-sm-4">
+                 {{ searchForm.error }}
+               </div>
+             </div>
+           </found-items-list>
+         </div>
+       </div>
+     </div>
+  </div>
+
+</body>
+</html>
