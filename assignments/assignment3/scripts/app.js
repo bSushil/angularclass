@@ -29,7 +29,6 @@
   function FoundItemsListDirectiveLink(scope, element, attrs, controller)
   {
     scope.$watch('list.checkItems()', function (newValue, oldValue) {
-      console.log(newValue, oldValue);
       if(newValue == 0 && oldValue > 0)
       {
         showError();
