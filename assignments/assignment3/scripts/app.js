@@ -4,7 +4,7 @@
   angular.module('ngFilterApp', [])
   .controller('SearchFilterController', SearchFilterController)
   .service('SearchMenuService', SearchMenuService)
-  .constant('ApiPath', 'http://davids-restaurant.herokuapp.com')
+  .constant('ApiPath', 'https://davids-restaurant.herokuapp.com')
   .directive('foundItemsList', FoundItemsListDirective)
   ;
 
