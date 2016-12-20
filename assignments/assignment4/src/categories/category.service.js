@@ -25,8 +25,8 @@
     {
       var promise = $http({
         method:'GET',
-        url:(ApiPath + '/menu_items.json?category='+catID),
-        data:{category:catID}
+        url:(ApiPath + '/menu_items.json'),
+        params:{category:catID}
       });
 
       return promise;
