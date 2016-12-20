@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="MenuApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment Four</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-md-10 col-sm-10 center-block">
+          <h1>MenuApp</h1>
+          <ui-view></ui-view>
+          <loading-spinner></loading-spinner>
+        </div>
+      </div>
+    </div>
+    <!-- javascript libraries -->
+    <script src="lib/jquery-3.1.0.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <!-- modules -->
+    <script src="src/menuapp.module.js"></script>
+    <script src="src/categories/category.module.js"></script>
+    <script src="src/spinner/spinner.module.js"></script>
+    <!-- routes -->
+    <script src="src/routes.js"></script>
+    <!--  -->
+    <script src="src/categories/category.controller.js"></script>
+    <script src="src/categories/category.service.js"></script>
+    <script src="src/categories/category.component.js"></script>
+    <script src="src/categories/categoryitems.controller.js"></script>
+    <script src="src/categories/menulist.component.js"></script>
+    <!--  -->
+  </body>
+</html>
