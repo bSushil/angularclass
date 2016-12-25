@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <h1>Menu Items for "{{menuItemsCtrl.category.name}}"</h1>
+    <p>
+      {{menuItemsCtrl.category.special_instructions}}
+    </p>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems" item="menuItem" basePath="menuItemsCtrl.basePath"></menu-list>        
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="row" ng-if="userDetail.detail.firstName.length > 0">
+  <div class="col-lg-6 col-md-6 col-sm-6">
+    Your details are as follows:
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        First Name:
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        {{userDetail.detail.firstName}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        Last Name:
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        {{userDetail.detail.lastName}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        Email:
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        {{userDetail.detail.email}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        Phone Number:
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        {{userDetail.detail.phoneNumber}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        Menu Chosen:
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        {{userDetail.detail.menuChoice}}
+      </div>
+    </div>
+  </div>
+</div>
+<div ng-transclude class="error">
+</div>
